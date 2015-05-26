@@ -1,0 +1,18 @@
+{% extends "HomePage.html" %}
+{% block content %}
+
+        <!--Content Area-->
+        <div id = "content">
+            Enter Relevant Word:
+            <form id = "input" action="{{ url_for('add_input') }}" method=post>
+                <input type = "text" name ="inputKey" height="100px">
+                <input type = "submit" name = "keyword">
+            </form>     
+        </div>
+<ul class=verses>
+{% for verse in verses %}
+	<li><h2>{{ verse.title }}</h2>{{ verse.text | safe}}</li>
+{% else %}
+	<li><em> No Verses have been found</em></li>
+{% endfor %}
+{% endblock %}

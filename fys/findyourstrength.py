@@ -12,12 +12,18 @@ app.config.from_object(__name__)
 
 @app.route('/')
 def show_entry():
-	return render_template('HomePage.html')
+	verses = []
+	#Do some processing here
+	return render_template('show_verses.html',verses=verses)
+
+@app.route('/about')
+def show_about():
+	return render_template('about.html')
 
 @app.route('/add_input', methods=['POST'])
 def add_input():
 	print request.form['inputKey']
-	
+	#Call scripts some processing and return to show_entry
 	return redirect(url_for('show_entry'))
 
 @app.route('/test')
