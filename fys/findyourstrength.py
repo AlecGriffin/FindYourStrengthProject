@@ -1,8 +1,8 @@
 import sqlite3,json
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 from contextlib import closing
-import BibleParser
-
+import BibleParser,search,pickle
+import os.path
 DATABASE = 'fys.db'
 DEBUG = True
 SECRET_KEY = 'dev key'
@@ -13,8 +13,14 @@ app.config.from_object(__name__)
 @app.route('/')
 def show_entry():
 	verses = []
-	bible = BibleParser.getParsedContent()
-	bible.printBible()
+	if os.path.isfile('bible_data.pkl'):
+	    with open('bible_data.pkl','rb') as inp:
+	        bible = pickle.load(inp)
+	    print("Loaded")
+	else:
+	    bible = BibleParser.getParsedContent()
+	verses = search.search(bible)
+	#bible.printBible()
 	#Do some processing here
 	return render_template('show_verses.html',verses=verses)
 

@@ -11,7 +11,7 @@
         </div>
 <ul class=verses>
 {% for verse in verses %}
-	<li><h2>{{ verse.title }}</h2>{{ verse.text | safe}}</li>
+	<li><h2>{{ verse.verseNum }}</h2>{{ verse.verseString | safe}}</li>
 {% else %}
 	<li><em> No Verses have been found</em></li>
 {% endfor %}
