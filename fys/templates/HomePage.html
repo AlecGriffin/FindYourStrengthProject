@@ -6,7 +6,7 @@
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,700' rel='stylesheet' type='text/css'>
         
         <!-- Imported CSS stylesheet -->
-        <link rel="stylesheet" type="text/css" href = "MainCSS.css">
+        <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename='MainCSS.css')}}">
     
     </head>
     
@@ -26,24 +26,9 @@
             
             </ul>
         </div>
+     
+        {% block content %}{% endblock %}
         
-        <!--Content Area-->
-        <div id = "content">
-            Enter Relevant Word:
-            <form id = "input">
-                <input type = "text" name ="inputKey" height="100px">
-                <input type = "submit" name = "keyword">
-            </form>
-            
-            
-            
-            
-            
-            
-            
-        </div>
-        
-
     </body>
     
 </html>
