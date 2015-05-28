@@ -1,7 +1,7 @@
 import sqlite3,json
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 from contextlib import closing
-
+import BibleParser
 
 DATABASE = 'fys.db'
 DEBUG = True
@@ -13,6 +13,8 @@ app.config.from_object(__name__)
 @app.route('/')
 def show_entry():
 	verses = []
+	bible = BibleParser.getParsedContent()
+	bible.printBible()
 	#Do some processing here
 	return render_template('show_verses.html',verses=verses)
 
@@ -22,7 +24,8 @@ def show_about():
 
 @app.route('/add_input', methods=['POST'])
 def add_input():
-	print request.form['inputKey']
+	print(request.form['inputKey'])
+
 	#Call scripts some processing and return to show_entry
 	return redirect(url_for('show_entry'))
 
