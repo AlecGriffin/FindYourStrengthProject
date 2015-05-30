@@ -23,6 +23,28 @@ class Bible:
         else:
             return -1
 
+    # Returns a list of Strings in the format:  Book_Title --- Chapter_Number:Verse_Number --- "Verse"
+    def getRelevantVerses(self, inputKey):
+        numTimesMentioned = 0
+        verses = []
+
+        # cycles through 66 books of the bible
+        for bookTitle in self.bookDict.keys():
+
+            # Cycles through the chapters of the bible
+            for chapter in self.bookDict[bookTitle].chapterList:
+
+                # Cyles through the verses on a specific chapter
+                for verse in chapter.verseList:
+                    verseWordList = verse.verseString.split()
+
+                    # Cycles through the words of a specific verse
+                    for word in verseWordList:
+                        if(word.lower() == inputKey.lower()):
+                            verses.append(bookTitle + " " + chapter.chapterNum + ":" + verse.verseNum + " " + verse.verseString)
+
+        return verses
+
     def printBible(self):
         for bookName in self.bookDict.keys():
             self.bookDict.get(bookName).printBook()

@@ -50,17 +50,23 @@ body{
 
 
 #content{
-    height: 600px;
+    height: 150px;
     background-color: crimson;
     text-align: center;
     font-size: 40px;
-    text-decoration: underline;
+    text-decoration: none;
     color:snow;
 }
 
 #content form{
  position: absolute;
- left: 40%;
+ left: 42%;
+}
+
+.verseList{
+ list-style-type: none;
+
+
 }
 
 

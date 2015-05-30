@@ -26,6 +26,14 @@
             
             </ul>
         </div>
+        
+        <div id = "content">
+            Enter Relevant Word:
+            <form id = "input" action="{{ url_for('add_input') }}" method=POST>
+                <input type = "text" name ="inputKey" height="100px">
+                <input type = "submit" name = "keyword">
+            </form>     
+        </div>
      
         {% block content %}{% endblock %}
         
