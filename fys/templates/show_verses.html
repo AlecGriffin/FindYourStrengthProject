@@ -1,18 +1,14 @@
-{% extends "HomePage.html" %}
+{% extends "homepage.html" %}
 {% block content %}
 
-        <!--Content Area-->
-        <div id = "content">
-            Enter Relevant Word:
-            <form id = "input" action="{{ url_for('add_input') }}" method=post>
-                <input type = "text" name ="inputKey" height="100px">
-                <input type = "submit" name = "keyword">
-            </form>     
-        </div>
 <ul class=verses>
 {% for verse in verses %}
-	<li><h2>{{ verse.verseNum }}</h2>{{ verse.verseString | safe}}</li>
+	<div class = "verseContainer">
+	<h3> {{ verse[0] }} </h3><br>
+	<li class = "verseList">-{{ verse[1] | safe}}</li>
+	</div>
 {% else %}
-	<li><em> No Verses have been found</em></li>
+	<li class = "verseList"><em> No Verses have been found</em></li>
+</ul>
 {% endfor %}
 {% endblock %}
