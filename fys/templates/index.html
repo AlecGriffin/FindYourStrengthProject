@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+    <header>
+        <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='cssMain.css')}}">
+        <!-- Import from: Google Web Font API -->
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,700' rel='stylesheet' type='text/css'>
+        <script type = "text/javascript" src = "{{url_for('static', filename='myscript.js')}}"></script>
+    </header>
+    <body>
+   
+         <div id= "container">
+            <div id = "header">
+                <h1>Find Your Strength</h1>
+            </div>
+                
+            <div id = "nav">
+                <ul>
+                    <li><a href = '/'>Home</a></li>
+                    <li><a href= '/about' >About</a></li>
+                
+                </ul>
+                
+            </div>
+                {% block relevantVerseForm %}{% endblock %}
+            
+            <div id = "footer">
+                Website By: Alec Griffin --- HOOK'EM
+            </div>
+        </div> 
+    
+    </body>
+</html>

@@ -1,42 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        
-        <!-- Import from: Google Web Font API -->
-        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,700' rel='stylesheet' type='text/css'>
-        
-        <!-- Imported CSS stylesheet -->
-        <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename='MainCSS.css')}}">
-    
-    </head>
-    
-    <body>
-        
-        <!-- Title Area-->
-        <div id = "header"> 
-            <h1> Find Your Strength!</h1>
-        </div>
-        
-        <!-- Nav Bar-->
-        <div id = "nav" >
-            <ul >
-                <li> <a href="#Home">Home</a> </li>
-                <li> <a href="#About">About</a></li>
+{% extends "index.html" %}
+
+{% block relevantVerseForm %}
+	 <div id = "formSection" name = 'mainForm'>
+                <p>Enter Relevant Word:</p><br>
+                <form onmousedown = "changeButtonColor()" onmouseup = "changeBackButtonColor()" action="{{ url_for('add_input') }}" method=POST >
+                    <input type = "text" name = "inputKey" >
+                    <input type = "submit" name = "submit" >
+                </form>
             
-            
-            </ul>
-        </div>
-        
-        <div id = "content">
-            Enter Relevant Word:
-            <form id = "input" action="{{ url_for('add_input') }}" method=POST>
-                <input type = "text" name ="inputKey" height="100px">
-                <input type = "submit" name = "keyword">
-            </form>     
-        </div>
-     
-        {% block content %}{% endblock %}
-        
-    </body>
-    
-</html>
+      </div>
+
+      <div id="verseArea">
+{% block content %}{% endblock%}
+	  </div>
+{% endblock%}

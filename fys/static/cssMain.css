@@ -1,0 +1,111 @@
+body{
+ font-family: 'Josefin Slab', serif;
+ background-color: lightgray;
+}
+
+
+#header{
+ text-shadow: -1px 1px 1px #998;
+ color: whitesmoke;
+ font-size: 20px;
+ text-align: left;
+ background-color: crimson;
+ border-radius: 5px;
+ padding: 10px;
+}
+
+/*Good Grey: rgb(71, 72, 75) */
+#nav{
+ background-color: rgb(71, 72, 75);
+ float: left;
+ width: 195px;
+ height: 1000px;
+ border-radius: 5px;
+}
+
+#nav li{
+ list-style: none;
+ margin: 0px;
+ padding: 0px;
+}
+
+#nav a{
+ cursor: pointer;
+ color: white;
+ text-decoration: none;
+ margin: 0px;
+ display: block;
+ padding: 6px 12px;
+ border-bottom: 1px solid grey;
+ 
+}
+
+#nav a:hover{
+    background-color: crimson;
+    padding-bottom: 7px;
+}
+
+#nav a:active{
+	background-color: blue;
+}
+
+
+#formSection{
+ margin-left: 200px;
+ text-align: center;
+ background-color: crimson;
+ height: 150px;
+ border-radius: 5px;
+}
+
+#formSection p{
+ font-size: 40px;
+ color: whitesmoke;
+ text-decoration: underline;
+}
+input[type=text]{
+ height: 20px; 
+ width: 200px;
+}
+
+input[type=submit]{
+ width:100px; 
+ height: 30px; 
+ border: 1px;
+ border-radius: 5px;
+}
+
+input[type=submit]:hover{
+ box-shadow: -2px 2px 2px #998;
+ background-color: darkgray;
+}
+
+#verseArea{
+ padding: 20px;
+ background-color: crimson;
+ margin-left: 200px;
+ border-radius:5px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+#footer{
+ background-color: crimson;
+ text-align: center;
+ padding: 10px;
+ clear: both;
+ border-radius: 5px;
+}
+
+.verseList{
+ list-style: none;
+ margin-bottom: 5px;
+}
+
+.verseContainer{
+ 	color: white;
+ 	background-color: gray;
+ 	padding: 5px;
+ 	margin: 10px;
+ 	border-radius: 5px; 
+}

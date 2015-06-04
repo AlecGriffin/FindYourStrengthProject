@@ -1,9 +1,12 @@
-{% extends "HomePage.html" %}
+{% extends "homepage.html" %}
 {% block content %}
 
 <ul class=verses>
 {% for verse in verses %}
-	<li class = "verseList">{{ verse | safe}}</li>
+	<div class = "verseContainer">
+	<h3> {{ verse[0] }} </h3><br>
+	<li class = "verseList">-{{ verse[1] | safe}}</li>
+	</div>
 {% else %}
 	<li class = "verseList"><em> No Verses have been found</em></li>
 </ul>
