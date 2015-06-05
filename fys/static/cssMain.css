@@ -78,6 +78,7 @@ input[type=submit]{
 input[type=submit]:hover{
  box-shadow: -2px 2px 2px #998;
  background-color: darkgray;
+ cursor: pointer;
 }
 
 #verseArea{
@@ -108,4 +109,43 @@ input[type=submit]:hover{
  	padding: 5px;
  	margin: 10px;
  	border-radius: 5px; 
+}
+
+#chapter_Selector{
+	padding: 30px;
+	background-color: crimson;
+ 	margin-left: 200px;
+ 	border-radius:5px;
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	overflow: hidden;
+
+}
+
+.bookTitle{
+	color: white;
+	font-size: 15px;
+ 	background-color: gray;
+ 	padding: 2px;
+ 	margin: 0px;
+ 	margin-right: 10px;
+ 	border-radius: 5px; 
+}
+
+.bookCollection{
+	color: white;
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+#chapter_table{
+	border: 1px solid black;
+	/*padding: 0px;
+	margin: 0px;*/
+	border:none;
+}
+
+#chapter_table p:hover{
+	background-color: darkgray;
+	cursor: pointer;
 }
