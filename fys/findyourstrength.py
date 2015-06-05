@@ -19,6 +19,10 @@ def show_entry():
 def show_about():
 	return render_template('about.html')
 
+@app.route('/readbible/')
+def show_readBible():
+	return render_template('readbible.html')
+
 @app.route('/add_input', methods=['POST'])
 def add_input():
 	verses = []

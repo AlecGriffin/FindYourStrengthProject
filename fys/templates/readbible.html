@@ -1,0 +1,303 @@
+{% extends "index.html" %}
+
+{% block readBible %}
+<div id = "chapter_Selector">
+	<!-- <div id = "Old_Testament">
+		
+		<p class = "bookTitle">Genesis</p>
+		<p class = "bookTitle">Exodus</p>
+		<p class = "bookTitle">Leviticus</p>
+		<p class = "bookTitle">Numbers</p>
+		<p class = "bookTitle">Deuteronomy</p>
+		<p class = "bookTitle">Joshua</p>
+		<p class = "bookTitle">Judges</p>
+		<p class = "bookTitle">Ruth</p>
+		<p class = "bookTitle">1 Samuel</p>
+		<p class = "bookTitle">2 Samuel</p>
+		<p class = "bookTitle">1 Kings</p>
+		<p class = "bookTitle">2 Kings</p>
+		<p class = "bookTitle">1 Chronicles</p>
+		<p class = "bookTitle">2 Chronicles</p>
+		<p class = "bookTitle">Ezra</p>
+		<p class = "bookTitle">Nehemiah</p>
+		<p class = "bookTitle">Esther</p>
+		<p class = "bookTitle">Job</p>
+		<p class = "bookTitle">Psalms</p>
+		<p class = "bookTitle">Proverbs</p>
+		<p class = "bookTitle">Ecclesiastes</p>
+		<p class = "bookTitle">Song of Solomon</p>
+		<p class = "bookTitle">Isaiah</p>
+		<p class = "bookTitle">Jeremiah</p>
+		<p class = "bookTitle">Lamentations</p>
+		<p class = "bookTitle">Ezekiel</p>
+		<p class = "bookTitle">Daniel</p>
+		<p class = "bookTitle">Hosea</p>
+		<p class = "bookTitle">Joel</p>
+		<p class = "bookTitle">Amos</p>
+		<p class = "bookTitle">Obadiah</p>
+		<p class = "bookTitle">Jonah</p>
+		<p class = "bookTitle">Micah</p>
+		<p class = "bookTitle">Nahum</p>
+		<p class = "bookTitle">Habakkuk</p>
+		<p class = "bookTitle">Zephaniah</p>
+		<p class = "bookTitle">Haggai</p>
+		<p class = "bookTitle">Zechariah</p>
+		<p class = "bookTitle">Malachi</p>
+	</div>
+
+	<div id = "New_Testament">
+		<p class = "bookCollection">New Testament</p>
+		<p class = "bookTitle">Matthew</p>
+		<p class = "bookTitle">Mark</p>
+		<p class = "bookTitle">Luke</p>
+		<p class = "bookTitle">John</p>
+		<p class = "bookTitle">Acts</p>
+		<p class = "bookTitle">Romans</p>
+		<p class = "bookTitle">1 Corinthians</p>
+		<p class = "bookTitle">2 Corinthians</p>
+		<p class = "bookTitle">Galatians</p>
+		<p class = "bookTitle">Ephesians</p>
+		<p class = "bookTitle">Philippians</p>
+		<p class = "bookTitle">Colossians</p>
+		<p class = "bookTitle">1 Thessalonians</p>
+		<p class = "bookTitle">2 Thessalonians</p>
+		<p class = "bookTitle">1 Timothy</p>
+		<p class = "bookTitle">2 Timothy</p>
+		<p class = "bookTitle">Titus</p>
+		<p class = "bookTitle">Philemon</p>
+		<p class = "bookTitle">Hebrews</p>
+		<p class = "bookTitle">James</p>
+		<p class = "bookTitle">1 Peter</p>
+		<p class = "bookTitle">2 Peter</p>
+		<p class = "bookTitle">1 John</p>
+		<p class = "bookTitle">2 John</p>
+		<p class = "bookTitle">3 John</p>
+		<p class = "bookTitle">Jude</p>
+		<p class = "bookTitle">Revelations</p>
+	</div> -->
+
+	<div>
+		<table id = "chapter_table">
+			<tr>
+				<th><p class = "bookCollection"> Old Testament</p></th>
+				<th><p class = "bookCollection">New Testament</p></th>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Genesis</p></td>
+				<td><p class = "bookTitle">Matthew</p></td>
+
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Exodus</p></td>
+				<td><p class = "bookTitle">Mark</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Leviticus</p></td>
+				<td><p class = "bookTitle">Luke</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Numbers</p></td>
+				<td><p class = "bookTitle">John</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Deuteronomy</p></td>
+				<td><p class = "bookTitle">Acts</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Joshua</p></td>
+				<td><p class = "bookTitle">Romans</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Judges</p></td>
+				<td><p class = "bookTitle">1 Corinthians</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Ruth</p></td>
+				<td><p class = "bookTitle">2 Corinthians</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">1 Samuel</p></td>
+				<td><p class = "bookTitle">Galatians</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">2 Samuel</p></td>
+				<td><p class = "bookTitle">Ephesians</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">1 Kings</p></td>
+				<td><p class = "bookTitle">Philippians</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">2 Kings</p></td>
+				<td><p class = "bookTitle">Colossians</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">1 Chronicles</p></td>
+				<td><p class = "bookTitle">1 Thessalonians</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">2 Chronicles</p></td>
+				<td><p class = "bookTitle">2 Thessalonians</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Ezra</p></td>
+				<td><p class = "bookTitle">1 Timothy</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Nehemiah</p></td>
+				<td><p class = "bookTitle">2 Timothy</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Esther</p></td>
+				<td><p class = "bookTitle">Titus</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Job</p></td>
+				<td><p class = "bookTitle">Philemon</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Psalms</p></td>
+				<td><p class = "bookTitle">Hebrews</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Proverbs</p></td>
+				<td><p class = "bookTitle">James</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Ecclesiastes</p></td>
+				<td><p class = "bookTitle">1 Peter</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Song of Solomon</p></td>
+				<td><p class = "bookTitle">2 Peter</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Isaiah</p></td>
+				<td><p class = "bookTitle">1 John</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Jeremiah</p></td>
+				<td><p class = "bookTitle">2 John</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Lamentations</p></td>
+				<td><p class = "bookTitle">3 John</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Ezekiel</p></td>
+				<td><p class = "bookTitle">Jude</p></td>
+
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Daniel</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Hosea</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Joel</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Amos</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Obadiah</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Jonah</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Micah</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Nahum</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Habakkuk</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Zephaniah</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Haggai</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Zechariah</p></td>
+			</tr>
+
+			<tr>
+				<td><p class = "bookTitle">Malachi</p></td>
+			</tr>
+
+
+		</table>
+
+
+	</div>
+
+</div>
+
+{% endblock%}
