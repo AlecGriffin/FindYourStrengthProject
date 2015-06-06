@@ -1,6 +1,6 @@
 import urllib.request,urllib.error,sqlite3,json,string,re
 from bs4 import BeautifulSoup
-
+import concurrent.futures
 baseUrlPrefix = "http://www.thesaurus.com/browse/"
 baseUrlSuffix = "?s=t"
 
@@ -32,9 +32,15 @@ def insertion(bibleSet):
 	counter = 0
 	for i in bibleSet:
 		counter  = counter +1
-		#print(counter)
+		print(counter)
 		s = i
 		s = re.sub(r'[^\w\s]','',s)#strips off the punctuation
+		conn = sqlite3.connect("synon.db")
+		c = conn.cursor()
+		c.execute("SELECT list FROM Synon WHERE word=?",(s,))
+		res = c.fetchall()
+		if len(res) !=0:
+			continue
 		synList = getSyn(s)
 		if synList == -1:
 			text ="-1"
@@ -53,8 +59,8 @@ def insertion(bibleSet):
 def initDB():
     conn = sqlite3.connect("synon.db")
     c = conn.cursor()
-    c.execute("DROP TABLE if exists Synon")
-    c.execute('CREATE TABLE Synon(word TEXT Primary Key, list TEXT)')
+    #c.execute("DROP TABLE if exists Synon")
+    c.execute('CREATE TABLE if not exists Synon(word TEXT Primary Key, list TEXT)')
     conn.commit()
     conn.close()
 
