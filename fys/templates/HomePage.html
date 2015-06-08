@@ -2,15 +2,14 @@
 
 {% block relevantVerseForm %}
 	 <div id = "formSection" name = 'mainForm'>
-                <p>Enter Relevant Word:</p><br>
-                <form onmousedown = "changeButtonColor()" onmouseup = "changeBackButtonColor()" action="{{ url_for('add_input') }}" method=POST >
+                <p id = "formSection_title">Enter Relevant Word:</p><br>
+                <form id = "form_area" onmousedown = "changeButtonColor()" onmouseup = "changeBackButtonColor()" action="{{ url_for('add_input') }}" method=POST >
                     <input type = "text" name = "inputKey" >
                     <input type = "submit" name = "submit" >
                 </form>
-            
+          		{% block analytic_info %}{% endblock %}   
       </div>
-
       <div id="verseArea">
-{% block content %}{% endblock%}
+	  {% block content %}{% endblock%}
 	  </div>
 {% endblock%}

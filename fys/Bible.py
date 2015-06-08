@@ -24,14 +24,46 @@ class Bible:
             return -1
 
     # Returns a list of Strings in the format:  Book_Title --- Chapter_Number:Verse_Number --- "Verse"
-    def getRelevantVerses(self, inputKey):
-        numTimesMentioned = 0
-        # list of Lists     [Each List's Format]--> Book_Title --- Chapter_Num:Verse_Num --- "Verse"
-        completeVerseList = []
+    # def getRelevantVerses(self, inputKey):
+    #     numTimesMentioned = 0
+    #     # list of Lists     [Each List's Format]--> Book_Title --- Chapter_Num:Verse_Num --- "Verse"
+    #     completeVerseList = []
 
-        
-        # cycles through 66 books of the bible
+    #     # Cycles through 66 books of the bible
+    #     for bookTitle in self.bookDict.keys():
+
+    #         # Cycles through the chapters of the bible
+    #         for chapter in self.bookDict[bookTitle].chapterList:
+
+    #             # Cyles through the verses on a specific chapter
+    #             for verse in chapter.verseList:
+    #                 verseWordList = verse.verseString.split()
+    #                 individualVerse = []
+    #                 individualVerse.append( bookTitle + " " + chapter.chapterNum + ":" + verse.verseNum)
+
+    #                 # Cycles through the words of a specific verse
+    #                 for word in verseWordList:
+    #                     if(word.lower() == inputKey.lower()):
+    #                         individualVerse.append(verse.verseString)
+    #                         completeVerseList.append(individualVerse)
+    #                         break
+
+    #     return completeVerseList
+
+    def getRelevantVerses(self, inputKey):
+
+        # list of Lists     [Each List's Format]--> Book_Title --- Chapter_Num:Verse_Num --- "Verse"
+        result = []
+        completeVerseList = []
+        analytics_numTimesMentioned = 0
+        analytics_versesContainingWord = 0
+        analytics_numVersesPerBookDict = {}
+        analytics_numWordsPerBookDict =  {}
+
+        # Cycles through 66 books of the bible
         for bookTitle in self.bookDict.keys():
+            analytics_numVersesPerBookDict[bookTitle] = 0
+            analytics_numWordsPerBookDict[bookTitle] = 0
 
             # Cycles through the chapters of the bible
             for chapter in self.bookDict[bookTitle].chapterList:
@@ -41,15 +73,29 @@ class Bible:
                     verseWordList = verse.verseString.split()
                     individualVerse = []
                     individualVerse.append( bookTitle + " " + chapter.chapterNum + ":" + verse.verseNum)
-                    # Cycles through the words of a specific verse
 
+                    tempWordAppearances = 0
                     for word in verseWordList:
                         if(word.lower() == inputKey.lower()):
-                            individualVerse.append(verse.verseString)
-                            completeVerseList.append(individualVerse)
-                            break
+                            tempWordAppearances += 1
+                            analytics_numTimesMentioned += 1
+                            analytics_numWordsPerBookDict[bookTitle] += 1
 
-        return completeVerseList
+                    if(tempWordAppearances > 0 ):
+                        analytics_versesContainingWord += 1
+                        analytics_numVersesPerBookDict[bookTitle] += 1
+                        individualVerse.append(verse.verseString)
+                        completeVerseList.append(individualVerse)
+
+        result.append(analytics_numTimesMentioned) # Number of times inputkey is mentioned in the bible
+        result.append(analytics_versesContainingWord) # Number of verses containing inputKey
+        result.append(analytics_numWordsPerBookDict) # Number of times inputkey appears in each book (Stored in a dictionary)
+        result.append(analytics_numVersesPerBookDict) # Number of verses containing inputKey per Book (Stored in a dictionary)
+       
+        result.append(completeVerseList) # List of verseLists
+        return result # ^^^List containing all of the above^^^
+
+
 
     def printBible(self):
         for bookName in self.bookDict.keys():
