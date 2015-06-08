@@ -37,7 +37,7 @@ def add_input():
 	versesToDisplay = search.search(bible, userInput)
 
 	#Call scripts some processing and return to show_entry
-	return render_template('show_verses.html', verses = versesToDisplay)
+	return render_template('show_verses.html', verses = versesToDisplay, keyWord = userInput)
 
 @app.route('/test')
 def testText():

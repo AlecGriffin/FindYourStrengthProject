@@ -4,7 +4,54 @@
         <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='cssMain.css')}}">
         <!-- Import from: Google Web Font API -->
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,700' rel='stylesheet' type='text/css'>
+
         <script type = "text/javascript" src = "{{url_for('static', filename='myscript.js')}}"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script>
+           $(document).ready(function(){
+             $(".bookTitle").mouseenter(function(){
+                $(this).css("color", "blue");
+             }); 
+        });
+
+           $(document).ready(function(){
+             $(".bookTitle").mouseleave(function(){
+                $(this).css("color", "white");
+             }); 
+        });
+
+           $(document).ready(function(){
+             $(".bookTitle").click(function(){
+                $(this).css("color", "crimson");
+             }); 
+        });
+
+        $(document).ready(function(){
+            $(".bookTitle").click(function(){
+                $("#chapter_nums_area").slideToggle("fast");
+            });
+        });
+
+           $(document).ready(function(){
+            $("#analyticTitle_words").click(function(){
+                $("#numWordsPerBookContainer").slideToggle("fast");
+                console.log("hello2");
+
+            });
+        });
+
+        $(document).ready(function(){
+            $("#analyticTitle_verses").click(function(){
+                $("#verseContainingWordContainer").slideToggle("fast");
+                console.log("hello");
+            });
+        });
+
+     
+
+
+        </script>
     </header>
     <body>
    
@@ -26,7 +73,7 @@
                 {% block readBible %}{% endblock %}
             
             <div id = "footer">
-                Website By: Alec Griffin --- HOOK'EM
+                Website By: Alec Griffin & Jeremy Lim --- HOOK'EM
             </div>
         </div> 
     

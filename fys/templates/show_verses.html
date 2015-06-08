@@ -1,9 +1,167 @@
 {% extends "homepage.html" %}
+														
+{% block analytic_info %}
+	<div id="analytic_info">
+	<h2>"{{keyWord}}" Analytic Information:</h2>
+			<p>Times "{{keyWord}}" is mentioned: {{ verses[0] }}</p>
+			<p>Verses containing "{{keyWord}}": {{verses[1]}}</p>
+
+			<!-- Num Words Per Book -->
+			<h3 id = "analyticTitle_words">Number of times "{{keyWord}}" is mentioned in each book</h3>
+			<div id = "numWordsPerBookContainer">
+				<p>Genesis: {{verses[2]["Genesis"]}}</p>
+				<p>Exodus: {{verses[2]["Exodus"]}}</p>
+				<p>Leviticus: {{verses[2]["Leviticus"]}}</p>
+				<p>Numbers: {{verses[2]["Numbers"]}}</p>
+				<p>Deuteronomy: {{verses[2]["Deuteronomy"]}}</p>
+				<p>Joshua: {{verses[2]["Joshua"]}}</p>
+				<p>Judges: {{verses[2]["Judges"]}}</p>
+				<p>Ruth: {{verses[2]["Ruth"]}}</p>
+				<p>1 Samuel: {{verses[2]["1 Samuel"]}}</p>
+				<p>2 Samuel: {{verses[2]["2 Samuel"]}}</p>
+				<p>1 Kings: {{verses[2]["1 Kings"]}}</p>
+				<p>2 Kings: {{verses[2]["2 Kings"]}}</p>
+				<p>1 Chronicles: {{verses[2]["1 Chronicles"]}}</p>
+				<p>2 Chronicles: {{verses[2]["2 Chronicles"]}}</p>
+				<p>Ezra: {{verses[2]["Ezra"]}}</p>
+				<p>Nehemiah: {{verses[2]["Nehemiah"]}}</p>
+				<p>Esther: {{verses[2]["Esther"]}}</p>
+				<p>Job: {{verses[2]["Job"]}}</p>
+				<p>Psalms: {{verses[2]["Psalms"]}}</p>
+				<p>Proverbs: {{verses[2]["Proverbs"]}}</p>
+				<p>Ecclesiastes: {{verses[2]["Ecclesiastes"]}}</p>
+				<p>Song of Solomon: {{verses[2]["Song of Solomon"]}}</p>
+				<p>Isaiah: {{verses[2]["Isaiah"]}}</p>
+				<p>Jeremiah: {{verses[2]["Jeremiah"]}}</p>
+				<p>Lamentations: {{verses[2]["Lamentations"]}}</p>
+				<p>Ezekiel: {{verses[2]["Ezekiel"]}}</p>
+				<p>Daniel: {{verses[2]["Daniel"]}}</p>
+				<p>Hosea: {{verses[2]["Hosea"]}}</p>
+				<p>Joel: {{verses[2]["Joel"]}}</p>
+				<p>Amos: {{verses[2]["Amos"]}}</p>
+				<p>Obadiah: {{verses[2]["Obadiah"]}}</p>
+				<p>Jonah: {{verses[2]["Jonah"]}}</p>
+				<p>Micah: {{verses[2]["Micah"]}}</p>
+				<p>Nahum: {{verses[2]["Nahum"]}}</p>
+				<p>Habakkuk: {{verses[2]["Habakkuk"]}}</p>
+				<p>Zephaniah: {{verses[2]["Zephaniah"]}}</p>
+				<p>Haggai: {{verses[2]["Haggai"]}}</p>
+				<p>Zechariah: {{verses[2]["Zechariah"]}}</p>
+				<p>Malachi: {{verses[2]["Malachi"]}}</p>
+				<p>Matthew: {{verses[2]["Matthew"]}}</p>
+				<p>Mark: {{verses[2]["Mark"]}}</p>
+				<p>Luke: {{verses[2]["Luke"]}}</p>
+				<p>John: {{verses[2]["John"]}}</p>
+				<p>Acts: {{verses[2]["Acts"]}}</p>
+				<p>Romans: {{verses[2]["Romans"]}}</p>
+				<p>1 Corinthians: {{verses[2]["1 Corinthians"]}}</p>
+				<p>2 Corinthians: {{verses[2]["2 Corinthians"]}}</p>
+				<p>Galatians: {{verses[2]["Galatians"]}}</p>
+				<p>Ephesians: {{verses[2]["Ephesians"]}}</p>
+				<p>Philippians: {{verses[2]["Philippians"]}}</p>
+				<p>Colossians: {{verses[2]["Colossians"]}}</p>
+				<p>1 Thessalonians: {{verses[2]["1 Thessalonians"]}}</p>
+				<p>2 Thessalonians: {{verses[2]["2 Thessalonians"]}}</p>
+				<p>1 Timothy: {{verses[2]["1 Timothy"]}}</p>
+				<p>2 Timothy: {{verses[2]["2 Timothy"]}}</p>
+				<p>Titus: {{verses[2]["Titus"]}}</p>
+				<p>Philemon: {{verses[2]["Philemon"]}}</p>
+				<p>Hebrews: {{verses[2]["Hebrews"]}}</p>
+				<p>James: {{verses[2]["James"]}}</p>
+				<p>1 Peter: {{verses[2]["1 Peter"]}}</p>
+				<p>2 Peter: {{verses[2]["2 Peter"]}}</p>
+				<p>1 John: {{verses[2]["1 John"]}}</p>
+				<p>2 John: {{verses[2]["2 John"]}}</p>
+				<p>3 John: {{verses[2]["3 John"]}}</p>
+				<p>Jude: {{verses[2]["Jude"]}}</p>
+				<p>Revelation: {{verses[2]["Revelation"]}}</p>
+			</div>
+				<br>
+				<br>
+				<br>
+
+				<!-- Num Verses containing word Per Book -->
+			<h3 id = "analyticTitle_verses">Number of verses containing "{{keyWord}}" in each book</h3>
+			<div id = "verseContainingWordContainer">
+				<p>Genesis: {{verses[3]["Genesis"]}}</p>
+				<p>Exodus: {{verses[3]["Exodus"]}}</p>
+				<p>Leviticus: {{verses[3]["Leviticus"]}}</p>
+				<p>Numbers: {{verses[3]["Numbers"]}}</p>
+				<p>Deuteronomy: {{verses[3]["Deuteronomy"]}}</p>
+				<p>Joshua: {{verses[3]["Joshua"]}}</p>
+				<p>Judges: {{verses[3]["Judges"]}}</p>
+				<p>Ruth: {{verses[3]["Ruth"]}}</p>
+				<p>1 Samuel: {{verses[3]["1 Samuel"]}}</p>
+				<p>2 Samuel: {{verses[3]["2 Samuel"]}}</p>
+				<p>1 Kings: {{verses[3]["1 Kings"]}}</p>
+				<p>2 Kings: {{verses[3]["2 Kings"]}}</p>
+				<p>1 Chronicles: {{verses[3]["1 Chronicles"]}}</p>
+				<p>2 Chronicles: {{verses[3]["2 Chronicles"]}}</p>
+				<p>Ezra: {{verses[3]["Ezra"]}}</p>
+				<p>Nehemiah: {{verses[3]["Nehemiah"]}}</p>
+				<p>Esther: {{verses[3]["Esther"]}}</p>
+				<p>Job: {{verses[3]["Job"]}}</p>
+				<p>Psalms: {{verses[3]["Psalms"]}}</p>
+				<p>Proverbs: {{verses[3]["Proverbs"]}}</p>
+				<p>Ecclesiastes: {{verses[3]["Ecclesiastes"]}}</p>
+				<p>Song of Solomon: {{verses[3]["Song of Solomon"]}}</p>
+				<p>Isaiah: {{verses[3]["Isaiah"]}}</p>
+				<p>Jeremiah: {{verses[3]["Jeremiah"]}}</p>
+				<p>Lamentations: {{verses[3]["Lamentations"]}}</p>
+				<p>Ezekiel: {{verses[3]["Ezekiel"]}}</p>
+				<p>Daniel: {{verses[3]["Daniel"]}}</p>
+				<p>Hosea: {{verses[3]["Hosea"]}}</p>
+				<p>Joel: {{verses[3]["Joel"]}}</p>
+				<p>Amos: {{verses[3]["Amos"]}}</p>
+				<p>Obadiah: {{verses[3]["Obadiah"]}}</p>
+				<p>Jonah: {{verses[3]["Jonah"]}}</p>
+				<p>Micah: {{verses[3]["Micah"]}}</p>
+				<p>Nahum: {{verses[3]["Nahum"]}}</p>
+				<p>Habakkuk: {{verses[3]["Habakkuk"]}}</p>
+				<p>Zephaniah: {{verses[3]["Zephaniah"]}}</p>
+				<p>Haggai: {{verses[3]["Haggai"]}}</p>
+				<p>Zechariah: {{verses[3]["Zechariah"]}}</p>
+				<p>Malachi: {{verses[3]["Malachi"]}}</p>
+				<p>Matthew: {{verses[3]["Matthew"]}}</p>
+				<p>Mark: {{verses[3]["Mark"]}}</p>
+				<p>Luke: {{verses[3]["Luke"]}}</p>
+				<p>John: {{verses[3]["John"]}}</p>
+				<p>Acts: {{verses[3]["Acts"]}}</p>
+				<p>Romans: {{verses[3]["Romans"]}}</p>
+				<p>1 Corinthians: {{verses[3]["1 Corinthians"]}}</p>
+				<p>2 Corinthians: {{verses[3]["2 Corinthians"]}}</p>
+				<p>Galatians: {{verses[3]["Galatians"]}}</p>
+				<p>Ephesians: {{verses[3]["Ephesians"]}}</p>
+				<p>Philippians: {{verses[3]["Philippians"]}}</p>
+				<p>Colossians: {{verses[3]["Colossians"]}}</p>
+				<p>1 Thessalonians: {{verses[3]["1 Thessalonians"]}}</p>
+				<p>2 Thessalonians: {{verses[3]["2 Thessalonians"]}}</p>
+				<p>1 Timothy: {{verses[3]["1 Timothy"]}}</p>
+				<p>2 Timothy: {{verses[3]["2 Timothy"]}}</p>
+				<p>Titus: {{verses[3]["Titus"]}}</p>
+				<p>Philemon: {{verses[3]["Philemon"]}}</p>
+				<p>Hebrews: {{verses[3]["Hebrews"]}}</p>
+				<p>James: {{verses[3]["James"]}}</p>
+				<p>1 Peter: {{verses[3]["1 Peter"]}}</p>
+				<p>2 Peter: {{verses[3]["2 Peter"]}}</p>
+				<p>1 John: {{verses[3]["1 John"]}}</p>
+				<p>2 John: {{verses[3]["2 John"]}}</p>
+				<p>3 John: {{verses[3]["3 John"]}}</p>
+				<p>Jude: {{verses[3]["Jude"]}}</p>
+				<p>Revelation: {{verses[3]["Revelation"]}}</p>
+			</div>
+	</div>
+{% endblock %}
+
+
+
 {% block content %}
 
 <ul class=verses>
-{% for verse in verses %}
+	<h2 id = "verseList_Title"> Verses containing "{{keyWord}}"</h2>
+{% for verse in verses[4] %}
 	<div class = "verseContainer">
+		
 	<h3> {{ verse[0] }} </h3><br>
 	<li class = "verseList">-{{ verse[1] | safe}}</li>
 	</div>
