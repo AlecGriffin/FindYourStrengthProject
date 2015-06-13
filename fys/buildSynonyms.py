@@ -40,6 +40,7 @@ def insertion(bibleSet):
 		c.execute("SELECT list FROM Synon WHERE word=?",(s,))
 		res = c.fetchall()
 		if len(res) !=0:
+			print(s)
 			continue
 		synList = getSyn(s)
 		if synList == -1:
