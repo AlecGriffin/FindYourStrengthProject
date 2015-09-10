@@ -1,3 +1,4 @@
-.pyc
-.pkl
+*.pyc
+*.pkl
 *~
+venv
