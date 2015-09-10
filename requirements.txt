@@ -4,12 +4,8 @@ MarkupSafe==0.23
 Werkzeug==0.10.4
 html5lib==0.999
 httplib2==0.8
-lxml==3.3.3
 oauthlib==0.6.1
-pycups==1.9.66
 pycurl==7.19.3
-pyserial==2.6
-pysmbc==1.0.14.1
 requests==2.2.1
 six==1.5.2
 urllib3==1.7.1
