@@ -1,1 +1,1 @@
-web: gunicorn findyourstrength:app --log-file=-
+web: gunicorn  __init__.py:app --log-file=-
